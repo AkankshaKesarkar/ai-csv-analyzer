@@ -38,7 +38,7 @@ export default function RealData({ onAnalysis }) {
     setLoadingSymbol(symbol)
     setError('')
     try {
-      const res = await axios.post('http://localhost:8000/fetch-data', {
+      const res = await axios.post('https://akankshakesarkar-ai-csv-analyzer-backend.hf.space/fetch-data', {
         dataset_type: type,
         symbol,
         period: '1y'
