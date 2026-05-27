@@ -43,22 +43,13 @@ AI CSV Analyzer is a **full-stack data analytics platform** that lets you:
 
 ## 🏗️ Architecture
 
-┌─────────────────────────────────────┐
-│           USER BROWSER              │
-│     React + Vite + Recharts         │
-│       (Deployed on Vercel)          │
-└─────────────┬───────────────────────┘
-│ HTTP REST API
-▼
-┌─────────────────────────────────────┐
-│         FASTAPI BACKEND             │
-│  pandas + scikit-learn + yfinance   │
-│    (Deployed on Hugging Face)       │
-│                                     │
-│  POST /upload   → CSV analysis      │
-│  POST /insights → AI insights       │
-│  POST /anomaly-detection → ML       │
-└─────────────────────────────────────┘
+```
+USER BROWSER (React + Vite + Recharts)
+         ↓ HTTP REST API
+FASTAPI BACKEND (Hugging Face)
+         ↓
+  pandas + scikit-learn + yfinance
+```
 
 ---
 
@@ -99,25 +90,22 @@ AI CSV Analyzer is a **full-stack data analytics platform** that lets you:
 
 ## 📁 Project Structure
 
+```
 ai-csv-analyzer/
-├── 📂 backend/
-│   ├── main.py              # FastAPI app — 7 REST endpoints
-│   ├── analyzer.py          # pandas + scikit-learn engine
-│   ├── data_fetcher.py      # yfinance data fetcher
-│   ├── Dockerfile           # Docker config for HuggingFace
+├── backend/
+│   ├── main.py
+│   ├── analyzer.py
+│   ├── data_fetcher.py
+│   ├── Dockerfile
 │   └── requirements.txt
-├── 📂 frontend/
-│   ├── src/
-│   │   ├── App.jsx
-│   │   └── components/
-│   │       ├── Upload.jsx
-│   │       ├── Dashboard.jsx
-│   │       └── RealData.jsx
-│   └── package.json
-├── 📂 sample_data/
-└── README.md
-
----
+├── frontend/
+│   └── src/
+│       └── components/
+│           ├── Upload.jsx
+│           ├── Dashboard.jsx
+│           └── RealData.jsx
+└── sample_data/
+```
 
 ## 🚀 Setup & Installation
 
