@@ -43,15 +43,30 @@ AI CSV Analyzer is a **full-stack data analytics platform** that lets you:
 
 ## 🏗️ Architecture
 
-```
-USER BROWSER (React + Vite + Recharts)
-         ↓ HTTP REST API
-FASTAPI BACKEND (Hugging Face)
-         ↓
-  pandas + scikit-learn + yfinance
-```
+## 🏗️ Architecture
 
----
+```mermaid
+graph TD
+    A[👤 User Browser] -->|Upload CSV / Click Analyze| B[⚡ React Frontend]
+    B -->|Deployed on| C[▲ Vercel]
+    B -->|HTTP REST API| D[🚀 FastAPI Backend]
+    D -->|Deployed on| E[🤗 Hugging Face Spaces]
+    D -->|Data Analysis| F[🐼 pandas]
+    D -->|Machine Learning| G[🔍 scikit-learn\nIsolation Forest]
+    D -->|Market Data| H[📈 yfinance\nStocks · Crypto · Nifty50]
+    D -->|Returns JSON| B
+    B -->|Shows| I[📊 Dashboard\nCharts · Stats · Insights]
+
+    style A fill:#4f46e5,color:#fff
+    style B fill:#61DAFB,color:#000
+    style C fill:#000,color:#fff
+    style D fill:#009688,color:#fff
+    style E fill:#FFD21E,color:#000
+    style F fill:#150458,color:#fff
+    style G fill:#F7931E,color:#fff
+    style H fill:#00897B,color:#fff
+    style I fill:#7C3AED,color:#fff
+```
 
 ## ✨ Features
 
