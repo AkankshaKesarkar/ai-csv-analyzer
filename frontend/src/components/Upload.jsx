@@ -22,7 +22,7 @@ export default function Upload({ onAnalysis }) {
     formData.append('file', file)
 
     try {
-      const res = await axios.post('http://localhost:8000/upload', formData)
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/upload`, formData)
       onAnalysis(res.data)
     } catch (err) {
       setError(err.response?.data?.detail || 'Failed to analyze file. Is the backend running?')

@@ -5,8 +5,7 @@ import pandas as pd
 import io
 from analyzer import DataAnalyzer
 from data_fetcher import DataFetcher
-import anthropic
-import json
+
 
 app = FastAPI(
     title="AI CSV Analyzer API",
@@ -24,7 +23,7 @@ app.add_middleware(
 
 analyzer = DataAnalyzer()
 fetcher = DataFetcher()
-client = anthropic.Anthropic()  # uses ANTHROPIC_API_KEY from env
+  # uses ANTHROPIC_API_KEY from env
 
 
 # ── Models ──────────────────────────────────────────────────────────────────
