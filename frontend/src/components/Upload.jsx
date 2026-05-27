@@ -23,7 +23,6 @@ export default function Upload({ onAnalysis }) {
 
     try {
       const res = await axios.post('https://akankshakesarkar-ai-csv-analyzer-backend.hf.space/upload', formData)
-      onAnalysis(res.data)
     } catch (err) {
       setError(err.response?.data?.detail || 'Failed to analyze file. Is the backend running?')
     } finally {
