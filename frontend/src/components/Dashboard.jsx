@@ -15,7 +15,7 @@ export default function Dashboard({ data }) {
   const getInsights = async () => {
     setLoadingInsights(true)
     try {
-      const res = await axios.post('http://localhost:8000/insights', {
+      const res = await axios.post('https://akankshakesarkar-ai-csv-analyzer-backend.hf.space/insights', {
         summary: {
           shape: data.shape,
           missing: data.missing,
