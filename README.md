@@ -8,13 +8,14 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-18.2-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
+[![Vercel](https://img.shields.io/badge/Deployed-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://ai-csv-analyzer-git-main-akankshakesarkars-projects.vercel.app)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/AkankshaKesarkar/ai-csv-analyzer?style=flat-square&color=yellow)](https://github.com/AkankshaKesarkar/ai-csv-analyzer/stargazers)
 
 **A production-grade, full-stack AI data analytics platform built with Python + React.**
 Upload any CSV or fetch live market data — get instant statistics, interactive charts, anomaly detection, and AI-generated insights.
 
-[🚀 View Demo](#demo) · [📖 Documentation](#setup--installation) · [🐛 Report Bug](https://github.com/AkankshaKesarkar/ai-csv-analyzer/issues) · [✨ Request Feature](https://github.com/AkankshaKesarkar/ai-csv-analyzer/issues)
+[🚀 Live Demo](https://ai-csv-analyzer-git-main-akankshakesarkars-projects.vercel.app) · [📖 Documentation](#setup--installation) · [🐛 Report Bug](https://github.com/AkankshaKesarkar/ai-csv-analyzer/issues) · [✨ Request Feature](https://github.com/AkankshaKesarkar/ai-csv-analyzer/issues)
 
 </div>
 
@@ -31,6 +32,14 @@ AI CSV Analyzer is a **full-stack data analytics platform** that lets you:
 - 🔍 **Detect anomalies** using Isolation Forest (ML model)
 
 > Built as an industry-grade portfolio project demonstrating end-to-end full-stack + AI/ML skills.
+
+---
+
+## 🚀 Live Demo
+
+👉 **[https://ai-csv-analyzer-git-main-akankshakesarkars-projects.vercel.app](https://ai-csv-analyzer-git-main-akankshakesarkars-projects.vercel.app)**
+
+> **Note:** The frontend is deployed on Vercel. To use backend features (real-world data fetch, anomaly detection), run the Python backend locally.
 
 ---
 
@@ -55,12 +64,17 @@ AI CSV Analyzer is a **full-stack data analytics platform** that lets you:
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Recharts](https://img.shields.io/badge/Recharts-Charts-4f46e5?style=for-the-badge)
 
 ### Backend
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+
+### Deployment
+![Vercel](https://img.shields.io/badge/Frontend-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Local](https://img.shields.io/badge/Backend-FastAPI%20Local-009688?style=for-the-badge)
 
 ---
 
@@ -79,17 +93,17 @@ ai-csv-analyzer/
 │   ├── src/
 │   │   ├── App.jsx
 │   │   └── components/
-│   │       ├── Upload.jsx
-│   │       ├── Dashboard.jsx
-│   │       └── RealData.jsx
+│   │       ├── Upload.jsx     # CSV upload page
+│   │       ├── Dashboard.jsx  # Full analysis dashboard
+│   │       └── RealData.jsx   # Live market data page
 │   └── package.json
 │
-├── 📂 sample_data/
+├── 📂 sample_data/            # 12 real-world CSV datasets
 │   ├── apple_stock_1y.csv
 │   ├── nvidia_stock_1y.csv
 │   ├── nifty50_1y.csv
 │   ├── bitcoin_1y.csv
-│   └── ...9 more datasets
+│   └── ...9 more
 │
 └── README.md
 ```
@@ -147,6 +161,9 @@ npm run dev
 |---|---|---|
 | `apple_stock_1y.csv` | AAPL — 1 year OHLCV | 🇺🇸 US |
 | `nvidia_stock_1y.csv` | NVDA — 1 year OHLCV | 🇺🇸 US |
+| `microsoft_stock_1y.csv` | MSFT — 1 year OHLCV | 🇺🇸 US |
+| `google_stock_1y.csv` | GOOGL — 1 year OHLCV | 🇺🇸 US |
+| `tesla_stock_1y.csv` | TSLA — 1 year OHLCV | 🇺🇸 US |
 | `nifty50_1y.csv` | Nifty 50 Index — 1 year | 🇮🇳 India |
 | `tcs_india_1y.csv` | TCS (NSE) — 1 year | 🇮🇳 India |
 | `reliance_1y.csv` | Reliance Industries | 🇮🇳 India |
@@ -161,10 +178,10 @@ npm run dev
 - ✅ **RESTful API design** with FastAPI and Pydantic validation
 - ✅ **Data engineering** with pandas — cleaning, transformation, aggregation
 - ✅ **Machine Learning** — Isolation Forest for unsupervised anomaly detection
-- ✅ **Statistical analysis** — skewness, kurtosis, IQR, correlation
+- ✅ **Statistical analysis** — skewness, kurtosis, IQR, outlier detection
 - ✅ **Financial data integration** — real-world fetching via yfinance
 - ✅ **Full-stack development** — React frontend + Python backend
-- ✅ **Production patterns** — CORS, error handling, modular architecture
+- ✅ **Production deployment** — Vercel (frontend) + FastAPI (backend)
 - ✅ **Data visualization** — Recharts interactive charts
 
 ---
@@ -174,9 +191,10 @@ npm run dev
 - [ ] PostgreSQL for storing analysis history
 - [ ] User authentication with JWT
 - [ ] Export reports as PDF
-- [ ] Deploy to AWS / Railway / Render
+- [ ] Deploy backend to Railway/Render
 - [ ] Email alerts for anomaly detection
 - [ ] Support Excel and JSON formats
+- [ ] Natural language query interface
 
 ---
 
@@ -187,6 +205,12 @@ npm run dev
 3. Commit (`git commit -m 'Add AmazingFeature'`)
 4. Push (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+---
+
+## 📄 License
+
+Distributed under the MIT License.
 
 ---
 
@@ -203,5 +227,7 @@ npm run dev
 ⭐ **If this project helped you, please give it a star!** ⭐
 
 Built with ❤️ using Python · FastAPI · React · scikit-learn · yfinance
+
+🚀 **[View Live Demo](https://ai-csv-analyzer-git-main-akankshakesarkars-projects.vercel.app)**
 
 </div>
